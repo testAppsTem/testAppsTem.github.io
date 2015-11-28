@@ -47,6 +47,10 @@
     <link rel="apple-touch-icon" href="assets/images/icons/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="assets/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-image-gallery.css">
+   
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,571 +61,94 @@
 </head>
 
 <body>
-    	<!-- navigation start -->
-	<section id="sticker" class="nav-block">
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<h1 class="nav-logo"><a class="nav-brand" href="index.html"> <img src="./assets/images/YN.png" alt="logo"></a></h1>
-						</div>
-					</div>
-					<div class="col-sm-8 text-center">
-						<!-- Collect the nav toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="navbar-nav">
-								<li><a href="index.html#event" style="font-size:15px">Обратно Към Събития</a></li>
-								<li><a href="" style="font-size:15px"></a></li>
-								<li><a href="mladojenec.html" style="font-size:15px">Следващо</a></li>
-								<li><a href="#people"></a></li>
-								<li><a href="#event"></a></li>
-								<li><a href="#gallery"></a></li>
-							</ul>
-						</div>
-						<!-- /.navbar-collapse -->
-					</div>
+    <!-- navigation start -->
+    <section id="sticker" class="nav-block">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <h1 class="nav-logo"><a class="nav-brand" href="index.html"> <img src="./assets/images/YN.png" alt="logo"></a></h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 text-center">
+                        <!-- Collect the nav toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="navbar-nav">
+                                <li><a href="index.html#event" style="font-size:15px">Обратно Към Събития</a></li>
+                                <li>
+                                    <a href="" style="font-size:15px"></a>
+                                </li>
+                                <li><a href="mladojenec.html" style="font-size:15px">Следващо</a></li>
+                                <li>
+                                    <a href="#people"></a>
+                                </li>
+                                <li>
+                                    <a href="#event"></a>
+                                </li>
+                                <li>
+                                    <a href="#gallery"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
 
-				</div>
-			</div>
-			<!-- /.container -->
-		</nav>
-	</section>
-	<!-- navigation end -->
+                </div>
+            </div>
+            <!-- /.container -->
+        </nav>
+    </section>
+    <!-- navigation end -->
+
+    <!-- The container for the list of example images -->
+    <div id="links">
+
+    </div>
+    <br>
+    </div>
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    
-    <section id="gallery" class="gallery lightsmoke">
- 			<div class="container">
- 				<div class="row">
- 					<div class="col-sm-12 text-center">
- 						<div class="heading wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
-							<h3>Photo Gallery</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet pharetra <br> nunc, non scelerisque ligula. Crasveljusto nulla Vestibuluma.</p>
-						</div>
-						<!-- /.heading end -->
- 					</div>
- 				</div>
- 				<div class="row">
- 					<div class="col-sm-12">
-	 					<div id="photo-gallery" class="photo-gallery" style="position: relative; height: 760px;">
-	 						<div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-                            <div class="item" style="position: absolute; left: 0px; top: 0px;">
-								<img src="assets/gallery/grim/1.jpg" alt="gallery image">
-								<a href="images/gallery/grim/1.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-							</a>	 						
-	 						</div>
-							<div class="item" style="position: absolute; left: 195px; top: 0px;">
-								<img src="assets/gallery/grim/2.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/2.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 0px;">
-								<img src="assets/gallery/grim/3.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/3.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 226px;">
-								<img src="assets/gallery/grim/4.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/4.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 269px;">
-								<img src="assets/gallery/grim/5.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/5.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>								
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 391px; top: 301px;">
-								<img src="assets/gallery/grim/6.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/6.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 195px; top: 396px;">
-								<img src="assets/gallery/grim/7.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/7.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-							<div class="item" style="position: absolute; left: 0px; top: 465px;">
-								<img src="assets/gallery/grim/8.jpg" alt="gallery image">
-								<a href="assets/gallery/grim/8.jpg" class="caption gallery-popup">
-									<h5>Happy Moment</h5>
-									<span class="img_category">Engagement</span>
-								</a>
-							</div>
-	 					</div>
-	 					<!-- /.photo-gallery end -->
-	 				</div>
- 				</div>
- 			</div>
- 		</section>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -641,6 +168,10 @@
     <script src="assets/js/jquery.placeholder.js"></script>
     <script src="assets/js/wow.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="assets/js/bootstrap-image-gallery.js"></script>
+    <script src="assets/js/demo.js"></script>
+
 
 </body>
 
