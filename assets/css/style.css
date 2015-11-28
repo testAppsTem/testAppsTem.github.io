@@ -238,13 +238,13 @@ ul, li {
 	position: absolute;
 	top: 5px;
 	right: -35px;
-	content: url(../images/o1.png);
+	/*content: url(../images/o1.png);*/
 	width: 75px;
 	height: 35px;
 }
 .heading h3::before {
 	position: absolute;
-	content: url(../images/o2.png);
+	/*content: url(../images/o2.png);*/
 	width: 75px;
 	height: 35px;
 	top: 5px;
