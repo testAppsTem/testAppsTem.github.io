@@ -943,7 +943,7 @@ ul, li {
 }
 .gallery .item {
 	width: 23%;
-	margin-bottom: 30px;
+	margin-bottom: 2em;
 	text-align: center;
 	overflow: hidden;
 }
