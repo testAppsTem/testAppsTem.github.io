@@ -1,0 +1,115 @@
+/*---------------------------------------------------
+Pink stylesheet will overwrite the default stylesheet
+-----------------------------------------------------
+*/
+
+.pink .banner-logo {
+	background: url(../../images/pink/Pink_MainBannerOrnament.png) no-repeat center center;
+}
+.pink .nav-block,
+.pink .nav-block .navbar-default {
+    background: #fa4b74;
+}
+.pink .heading h3 {
+    color: #fa4b74;
+}
+.pink .heading h3::before {
+    content: url(../../images/pink/Pink_HeadlineMainLeft_ornament.png);
+}
+.pink .heading h3::after {
+    content: url(../../images/pink/Pink_HeadlineMainRight_ornament.png);
+}
+.pink .thumb-img {
+	border-color: #fb809c;
+}
+.pink .couple {
+	background: url(../../images/pink/Pink_HomeMainLove_icon.png) no-repeat 50% 65%;
+}
+.pink #story .fa {
+	color: #e1704b;
+}
+.pink .love-sign {
+	background: url(../../images/pink/Pink_love.png) no-repeat center center;
+}
+.pink .timeline-head {
+	background: #fa4b74;
+}
+.pink .timeline-block-right:before {
+	border-color: transparent #fa4b74 transparent transparent;
+}
+.pink .reverse .timeline-block-right:after {
+	border-color: transparent transparent transparent #fa4b74;
+}
+.pink .timeline:before {
+	background: #fb809c;
+}
+.pink .contact .default-btn:hover {
+	background: #fa4b74;
+	color: #fff;
+}
+.pink .default-btn:hover {
+	background: #fa4b74;
+}
+.pink .profile h5 {
+    color: #fa4b74;
+}
+.pink .people .social-icon li .fa {
+	color: #fb809c;
+}
+.pink .event-body h5 a {
+	color:#fb809c;
+}
+.pink .event-date {
+	background: #fb809c;
+}
+.pink .gift-block:hover {
+	border-color: #fb809c; 
+}
+.pink .blog-head h5 {
+	color: #f64b74;
+}
+.pink .blog-link {
+	color: #fa4b74;
+}
+.pink blockquote:before {
+    background: url(../../images/pink/Pink_bloqueqoute.png) no-repeat;
+}
+.pink blockquote:after {
+    background: url(../../images/pink/Pink_bloqutouqe-right.png) no-repeat;
+}
+.pink .contact h5 {
+	color: #fa4b74;
+}
+.pink .contact-address ul li .fa {
+    color: #fa4b74;
+}
+.pink .contact .form-control, .pink .contact textarea {
+    border:1px solid #fa4b74;
+}
+.pink .sbHolder {
+	border:1px solid #fa4b74;
+}
+.pink .footer-logo {
+    background: url(../../images/pink/Pink_FooterOrnamnet.png) no-repeat center center;
+}
+.pink footer a .fa:hover {
+	background-color: #fa4b74;
+	border: 1px solid #fa4b74;
+}
+.pink .nav-pills > li.current > a {
+	color: #fa4b74;
+}
+.pink .sbToggle {
+	color: #fa4b74;
+}
+.pink .contact .default-btn {
+   border: 1px solid #fa4b74;
+   color: #fa4b74
+}
+.pink .next-arrow a {
+   color: #fa4b74
+}
+
+
+
+
