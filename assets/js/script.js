@@ -120,7 +120,7 @@ var msnry = new Masonry( container, {
   itemSelector: '.item',
   "gutter": 30
 });
-setInterval(function(){msnry.layout()}, 2500);
+setInterval(function(){msnry.layout()}, 3500);
 
 //---------------------------------------------------
 //------------------- Placeholder -------------------
