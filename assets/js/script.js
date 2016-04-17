@@ -195,3 +195,10 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 }
   
 });
+
+
+
+var vid = document.getElementById("myVideo");
+vid.onloadstart = function() {
+    alert("Starting to load video");
+};
