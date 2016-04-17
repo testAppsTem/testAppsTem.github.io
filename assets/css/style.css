@@ -381,10 +381,10 @@ ul, li {
 .banner-logo {
 	display: inline-block;
 	background: url(../images/baner.png) no-repeat center center;
-	width: 310px;
+	width: 370px;
 	height: 305px;
 	padding: 115px 0px;
-	margin-top: 80px;
+	margin-top: 30px;
 	margin-bottom: 107px;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -1078,7 +1078,7 @@ ul, li {
 */
 
 .quote {
-	background: url(../images/1.jpg) no-repeat fixed center center;
+	background: url(../images/t.jpg) no-repeat fixed center center;
 }
 .quote .color-overlay {
 	padding: 70px 0;
